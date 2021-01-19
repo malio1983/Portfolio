@@ -107,6 +107,7 @@ body {
 .right-side {
     position: absolute;
     top: 0px;
+
     width: 600px;
     right: -25%;
     height: 500px;
@@ -115,12 +116,16 @@ body {
     animation: open-right 1s .5s linear forwards;
 }
 @keyframes open-left {
-    0% {left: 51%}
-    100% {left:13%}
+    /* 0% {left: 51%}
+    100% {left:13%} */
+    0% {transform: translateX(0%)skewX(-52deg)}
+    100% {transform:translateX(-129%)skewX(-52deg)}
 }
 @keyframes open-right {
-    0% {right: -25%;box-shadow: none;}
-    100% {right:-66%;box-shadow: -5px 0 5px rgb(53, 18, 18);}
+    /* 0% {right: -25%;box-shadow: none;}
+    100% {right:-66%;box-shadow: -5px 0 5px rgb(53, 18, 18);} */
+    0% {transform: translateX(0%) skewX(34.3deg) ;box-shadow: none;}
+    100% {transform: translateX(54.3%) skewX(34.3deg);box-shadow: -5px 0 5px rgb(53, 18, 18);}
 }
 @keyframes open-correct {
     0% {right: 50.3%}
